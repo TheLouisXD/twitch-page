@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-image {
+    flex: 1 1 300px;
+    position: relative;
+    margin-right: 50px;
+    transform: rotate(-5deg);
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15%;
+    border: 5px solid #9147ff;
+    box-shadow: 20px 20px 0 rgba(145, 71, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+    transform: rotate(2deg) scale(1.05);
+}
+
+.content {
+    flex: 1 1 400px;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.gradient-text{
+    background: linear-gradient(to right,#9147ff, #ED64A6); /* Gradiente */
+    color: transparent;
+    background-clip: text;
+    text-shadow: 0 0; /* <- Esto es clave para eliminar la sombre del texto y no se sobreponga */
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #9147ff;
+    text-shadow: 3px 3px 0 #000;
+    display: flex;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.twitch-badge {
+    font-size: 0.6em;
+    background: #9147ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.bio {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+h1, .bio {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.highlight {
+    color: #9147ff;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.twitch { color: #9146FF; }
+
+.youtube { color: #FF0000; }
+
+.twitter { color: #1DA1F2; }
+
+.instagram { color: #E4405F; }
+
+.discord { color: #7289DA; }
+
+.twitch-button {
+    display: inline-block;
+    background: #9147ff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.twitch-button:hover {
+    transform: scale(1.05);
+    background: #772ce8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Animated Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #9147ff, #0f0f0f, #1f1f1f);
+    z-index: -1;
+    opacity: 0.3;
+    animation: gradientAnim 15s ease infinite;
+}
+
+@keyframes gradientAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
