@@ -41,6 +41,14 @@ body {
     transform: rotate(2deg) scale(1.05);
 }
 
+.profile-image.live{
+    transform: none;
+}
+
+.profile-image-live img {
+    transform: none;
+}
+
 .content {
     flex: 1 1 400px;
     position: relative;

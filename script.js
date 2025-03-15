@@ -29,6 +29,8 @@ async function checkTwitchStream() {
                 allowfullscreen>
             </iframe>
             `;
+        // Evitar la rotacion cuando este en vivo
+        profileImage.classList.add('live');
     } else {
         twitchButton.textContent = '👀 Mira mi canal de twitch :3';
     }
